@@ -37,6 +37,8 @@ img {
     --LogoColor: #4D5AE5;
     --MainTextColor: #2E2F42;
     --SecondTextColor: #434455;
+    --HoverFocusColor: #404BBF;
+    --FooterHoverFocusColor: #31D0AA;
     --CustomersMainColor: #8E8F99;
     --CustomersLinkColor: #404BBF;
     --HeroGradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
@@ -100,6 +102,10 @@ img {
     color: var(--MainTextColor)
 }
 
+.header-link:is(:hover, :focus) {
+    color: var(--HoverFocusColor);
+}
+
 /* .header-address {
 } */
 
@@ -121,6 +127,12 @@ img {
 .address-tel {
     color: var(--SecondTextColor)
 }
+
+.address-mail:is(:hover, :focus),
+.address-tel:is(:hover, :focus) {
+    color: var(--HoverFocusColor);
+}
+
 
 /*--------------- main ---------------*/
 
@@ -169,6 +181,10 @@ img {
     background: #4D5AE5;
     border-style: none;
     border-radius: 4px;
+}
+
+.hero-btn:is(:hover, :focus) {
+    background-color: var(--HoverFocusColor);
 }
 
 /*-------------- studio advantage ---------------*/
@@ -324,6 +340,10 @@ img {
     background-color: var(--LogoColor);
 }
 
+.studio-team-icon-link:is(:hover, :focus) {
+    background-color: var(--HoverFocusColor);
+}
+
 /*--------------- customers ---------------*/
 
 .customers {
@@ -444,6 +464,10 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.footer-soc-link:is(:hover, :focus) {
+    background-color: var(--FooterHoverFocusColor);
+}
+
 
 /*--------------------- PORTFOLIO PAGE ---------------------*/
 
@@ -462,8 +486,7 @@ img {
 /* .portfolio-navigation-item {
 } */
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.portfolio-btn:is(:hover, :focus) {
     color: #FFFFFF;
     background: #404BBF;
     border: 1px solid #404BBF;
